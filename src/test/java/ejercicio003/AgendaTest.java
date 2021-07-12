@@ -24,5 +24,17 @@ class AgendaTest {
 		lista.add(agenda.pedirNombre());
 		assertTrue(lista.size() == 1);
 	}
+	
+	@Test
+	void testListaNombres() {
+		List<String> lista = new ArrayList<>();
+		
+		List<String> listaAux = agenda.variosNombres(3);
+		
+		for(String s:listaAux) {
+			lista.add(s);
+		}
+		assertTrue(lista.size() == 3);
+	}
 
 }
